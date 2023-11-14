@@ -8,6 +8,7 @@ export function merge(collection_1 : number[], collection_2 : number[]) : number
                 pointer++  
             }
         }
+        // if all numbers in collection_2 has been push, push all the rest numbers in collection_1 into result.
         if (pointer == collection_2.length) {
             for (let n=i; n<collection_1.length; n++) {
                 result.push(collection_1[n]);
@@ -16,7 +17,7 @@ export function merge(collection_1 : number[], collection_2 : number[]) : number
         }
         result.push(collection_1[i]);
     }
- 
+    // push remainning numbers in collection_2
     for (let i=pointer; i<collection_2.length; i++) {
             result.push(collection_2[i]);
         }
